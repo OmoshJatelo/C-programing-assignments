@@ -4,7 +4,7 @@
 int main () 
 {
     int rounds, lucky_number, remainder, count=1, total_score=0;
-    /*Seeding the random number to the current time*/
+    /*Seeding the random number to the current time in seconds*/
     srand (time(0));
     /*Generating a random number between 1 and 100*/
     int secret_number= rand() % 100 + 1;
