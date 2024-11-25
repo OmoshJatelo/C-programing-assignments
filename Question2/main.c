@@ -2,21 +2,22 @@
 #include <stdlib.h>
 
 int main() {
-    int adm_number, subject1, subject2, subject3;
+    int subject1, subject2, subject3;
     float average_marks;
-    char surname[20];
+    char surname[25];
     char choice;
+    char adm_number[24];
 
-    do {
+    do{
         printf("Enter the following:\n");
         printf("Admission Number: ");
-        scanf("%d", &adm_number);
+        scanf("%s", &adm_number);
 
-        printf("Surname: ");
-        scanf("%s", surname);
+        printf("Surname: \n");
+        scanf("%s" ,&surname);
 
         printf("enter three subject marks:\n");
-        scanf("%d%d%d", &subject1, &subject2, &subject3);
+        scanf("%d %d %d", &subject1, &subject2, &subject3);
 
         average_marks = (subject1 + subject2 + subject3)/3.0;
 
@@ -41,12 +42,13 @@ int main() {
             printf("Your grade is E\n");
         }
 
-        printf("Enter Y to continue to add another student and N to stop the progress: ");
-        scanf("%c", &choice);
+        printf("Enter Y to continue to add another student and N to stop the progress:\n");
+        scanf(" %c",&choice);
     }
 
-     while (choice == 'Y');
-     printf("Program has been stopped successfully!\n");
-
+    while(choice=='y'||choice=='Y');
+    
+    printf("\nExited the program successfully");
+        
     return 0;
 }
