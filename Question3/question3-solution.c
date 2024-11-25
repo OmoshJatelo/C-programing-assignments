@@ -7,26 +7,31 @@ int main()
     printf("Enter number of clients\n");
     scanf("%d",&n);
     while(counter <= n){
-
-        printf("Enter your credit limit\n");
-        scanf("%d",&credit_limit);
-
-        printf("Enter price:\n");
-        scanf("%d",&price);
-
-
         do{
+
+            printf("Enter your credit limit\n");
+            scanf("%d",&credit_limit);
+
+            printf("Enter price:\n");
+            scanf("%d",&price);
+
+
+        
 
             printf("Enter the quantity:\n");
             scanf("%d",&quantity);
 
             total_price = price * quantity;
-            if(total_price > credit_limit){
+            while(total_price > credit_limit){
                 printf("Sorry you cannot purchase goods worth such a value on credit\n");
+                printf("Enter the quantity:\n");
+                scanf("%d",&quantity);
+                total_price = price * quantity;
             }
-        }while(total_price > credit_limit);
-            printf("Thank you for purchasing from us\n the total was %d\n", &total_price);
-            counter ++;
+        }
+        while(total_price >credit_limit);
+        printf("Thank you for purchasing from us\n the total was %d \n" ,total_price);
+        counter ++;
 
     }
     return 0;
