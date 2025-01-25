@@ -4,19 +4,19 @@
 int main() {
     int adm_number, subject1, subject2, subject3;
     float average_marks;
-    char surname[20];
+    char surname[35];
     char choice;
 
     do {
         printf("Enter the following:\n");
         printf("Admission Number: ");
-        scanf("%d", &adm_number);
+        scanf(" %d", &adm_number);
 
         printf("Surname: ");
-        scanf("%s", surname);
+        scanf("%s", &surname);
 
         printf("enter three subject marks:\n");
-        scanf("%d%d%d", &subject1, &subject2, &subject3);
+        scanf(" %d%d%d", &subject1, &subject2, &subject3);
 
         average_marks = (subject1 + subject2 + subject3)/3.0;
 

@@ -52,7 +52,7 @@ int main()
      
     net_pay = gross_pay - tax_payable;
 
-    printf("\nNet pay = %lf", net_pay);
+    printf("\nNet pay = %lf\n", net_pay);
 
     return 0;
 }
